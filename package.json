@@ -1,0 +1,20 @@
+{
+  "name": "kirana",
+  "version": "1.0.0",
+  "description": "bot study",
+  "keywords": [
+    "telegram"
+  ],
+  "license": "ISC",
+  "author": "Eka Restu Syahputra",
+  "type": "commonjs",
+  "main": "main.js",
+  "scripts": {
+    "dev": "nodemon main..js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "node-telegram-bot-api": "^0.66.0",
+    "nodemon": "^3.1.10"
+  }
+}
