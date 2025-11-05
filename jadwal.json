@@ -1,0 +1,65 @@
+{
+  "SENIN": [
+    { "waktu": "07.00 - 07.39 (les 1)", "mapel": "Sosiologi Lanjut", "guru": "Maretha Pasaribu S.Pd" },
+    { "waktu": "07.40 - 08.19 (les 2)", "mapel": "Sosiologi Lanjut", "guru": "Maretha Pasaribu S.Pd" },
+    { "waktu": "08.20 - 08.59 (les 3)", "mapel": "Bahasa Indonesia", "guru": "Mirna Alifiani S.Pd" },
+    { "waktu": "09.00 - 09.39 (les 4)", "mapel": "Bahasa Indonesia", "guru": "Mirna Alifiani S.Pd" },
+    { "waktu": "09.40 - 10.19 (les 5)", "mapel": "Bahasa Inggris Lanjut", "guru": "Inriwati Saragih S.Pd" },
+    { "waktu": "10.20 - 10.49 (istirahat)", "mapel": "Bahasa Inggris Lanjut", "guru": "Inriwati Saragih S.Pd" },
+    { "waktu": "10.50 - 11.29 (les 6)", "mapel": "Bahasa Inggris Lanjut", "guru": "Inriwati Saragih S.Pd" },
+    { "waktu": "11.30 - 12.09 (les 7)", "mapel": "Matematika", "guru": "Siti Zahara Harahap M.Pd" },
+    { "waktu": "12.10 - 12.49 (les 8)", "mapel": "Matematika", "guru": "Siti Zahara Harahap M.Pd" },
+    { "waktu": "12.50 - 13.29 (les 9)", "mapel": "Informatika Lanjut", "guru": "Anita Marpaung S.Kom" },
+    { "waktu": "13.30 - 14.10 (les 10)", "mapel": "Informatika Lanjut", "guru": "Anita Marpaung S.Kom" }
+  ],
+
+  "SELASA": [
+    { "waktu": "07.00 - 07.39 (les 1)", "mapel": "Sosiologi Lanjut", "guru": "Maretha Pasaribu S.Pd" },
+    { "waktu": "07.40 - 08.19 (les 2)", "mapel": "Sosiologi Lanjut", "guru": "Maretha Pasaribu S.Pd" },
+    { "waktu": "08.20 - 08.59 (les 3)", "mapel": "Sosiologi Lanjut", "guru": "Maretha Pasaribu S.Pd" },
+    { "waktu": "09.00 - 09.39 (les 4)", "mapel": "Agama", "guru": "Zainudin S.PdI" },
+    { "waktu": "09.40 - 10.09 (istirahat)", "mapel": "Agama", "guru": "Zainudin S.PdI" },
+    { "waktu": "10.10 - 10.49 (les 5)", "mapel": "Agama", "guru": "Zainudin S.PdI" },
+    { "waktu": "10.50 - 11.29 (les 6)", "mapel": "Agama", "guru": "Zainudin S.PdI" },
+    { "waktu": "11.30 - 12.09 (les 7)", "mapel": "PKN", "guru": "Dahlia Sinaga S.Pd" },
+    { "waktu": "12.10 - 12.49 (les 8)", "mapel": "PKN", "guru": "Dahlia Sinaga S.Pd" },
+    { "waktu": "12.50 - 13.29 (les 9)", "mapel": "Bahasa Jerman", "guru": "Restiana Dewi S.Pd" },
+    { "waktu": "13.30 - 14.10 (les 10)", "mapel": "Bahasa Jerman", "guru": "Restiana Dewi S.Pd" }
+  ],
+
+  "RABU": [
+    { "waktu": "07.00 - 07.39 (les 1)", "mapel": "Bahasa Inggris Lanjut", "guru": "Inriwati Saragih S.Pd" },
+    { "waktu": "07.40 - 08.19 (les 2)", "mapel": "Bahasa Inggris Lanjut", "guru": "Inriwati Saragih S.Pd" },
+    { "waktu": "08.20 - 08.59 (les 3)", "mapel": "Bahasa Inggris Lanjut", "guru": "Inriwati Saragih S.Pd" },
+    { "waktu": "09.00 - 09.39 (les 4)", "mapel": "Penjas", "guru": "Sende Tua Siregar S.Pd" },
+    { "waktu": "09.40 - 10.19 (les 5)", "mapel": "Penjas", "guru": "Sende Tua Siregar S.Pd" },
+    { "waktu": "10.20 - 10.49 (istirahat)", "mapel": "Penjas", "guru": "Sende Tua Siregar S.Pd" },
+    { "waktu": "10.50 - 11.29 (les 6)", "mapel": "Penjas", "guru": "Sende Tua Siregar S.Pd" },
+    { "waktu": "11.30 - 12.09 (les 7)", "mapel": "Seni Budaya", "guru": "Fernando Simanullang S.Pd" },
+    { "waktu": "12.10 - 12.49 (les 8)", "mapel": "Seni Budaya", "guru": "Fernando Simanullang S.Pd" },
+    { "waktu": "12.50 - 13.29 (les 9)", "mapel": "Ekonomi Lanjut", "guru": "Lady Sibotang S.Pd" },
+    { "waktu": "13.30 - 14.10 (les 10)", "mapel": "Ekonomi Lanjut", "guru": "Lady Sibotang S.Pd" }
+  ],
+
+  "KAMIS": [
+    { "waktu": "07.00 - 07.39 (les 1)", "mapel": "Bahasa Indonesia", "guru": "Mirna Alifiani S.Pd" },
+    { "waktu": "07.40 - 08.19 (les 2)", "mapel": "Bahasa Indonesia", "guru": "Mirna Alifiani S.Pd" },
+    { "waktu": "08.20 - 08.59 (les 3)", "mapel": "Ekonomi Lanjut", "guru": "Lady Sibotang S.Pd" },
+    { "waktu": "09.00 - 09.39 (les 4)", "mapel": "Ekonomi Lanjut", "guru": "Lady Sibotang S.Pd" },
+    { "waktu": "09.40 - 10.09 (istirahat)", "mapel": "Ekonomi Lanjut", "guru": "Lady Sibotang S.Pd" },
+    { "waktu": "10.10 - 10.49 (les 5)", "mapel": "Ekonomi Lanjut", "guru": "Lady Sibotang S.Pd" },
+    { "waktu": "10.50 - 11.29 (les 6)", "mapel": "Informatika Lanjut", "guru": "Anita Marpaung S.Kom" },
+    { "waktu": "11.30 - 12.09 (les 7)", "mapel": "Informatika Lanjut", "guru": "Anita Marpaung S.Kom" },
+    { "waktu": "12.10 - 12.49 (les 8)", "mapel": "Informatika Lanjut", "guru": "Anita Marpaung S.Kom" }
+  ],
+
+  "JUMAT": [
+    { "waktu": "07.00 - 07.39 (les 1)", "mapel": "Sejarah Indonesia", "guru": "Magdalena Sinaga S.Pd" },
+    { "waktu": "07.40 - 08.19 (les 2)", "mapel": "Sejarah Indonesia", "guru": "Magdalena Sinaga S.Pd" },
+    { "waktu": "08.20 - 08.59 (les 3)", "mapel": "Bahasa Inggris Wajib", "guru": "M Ikhsan Setiawan S.Pd" },
+    { "waktu": "09.00 - 09.39 (les 4)", "mapel": "Bahasa Inggris Wajib", "guru": "M Ikhsan Setiawan S.Pd" },
+    { "waktu": "09.30 - 10.45 (istirahat)", "mapel": "Bahasa Inggris Wajib", "guru": "M Ikhsan Setiawan S.Pd" },
+    { "waktu": "10.10 - 10.49 (les 5)", "mapel": "Ekonomi Lanjut", "guru": "Lady Sibotang S.Pd" },
+    { "waktu": "10.50 - 11.29 (les 6)", "mapel": "Informatika Lanjut", "guru": "Anita Marpaung S.Kom" }
+  ]
+}

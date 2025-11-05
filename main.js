@@ -21,7 +21,7 @@ bot.onText(/\/start/, (msg) => {
   bot.sendMessage(
     chatId, 
    `Halo ${userName}! Selamat datang di bot Kirana 🌟\n\n` +
-    'Saya siap membantu Anda untuk berbelanja dengan mudah dan nyaman.\n' +
+    'Bot ini dibuat oleh @vallenciaaxyws\n' +
     'Silakan pilih menu di bawah ini:',
     opts
   );
@@ -31,6 +31,15 @@ bot.onText(/\/start/, (msg) => {
 bot.on('callback_query', (callbackQuery) => {
   const chatId = callbackQuery.message.chat.id;
   const data = callbackQuery.data;
+
+const path = require('path'); //module ngatur path
+const fs = require('fs'); //untuk akses file
+const jadwal = require('./jadwal.json');
+
+function parseTime(str) {
+  const [jam, menit] = str.split('.').map(Number);
+  return jam * 60 + menit;
+}
 
   switch(data) {
     case 'menu':
@@ -46,7 +55,7 @@ bot.on('callback_query', (callbackQuery) => {
               { text: 'Upload Tugas', callback_data: 'upload' }
             ],
             [
-              {text: 'Jadwal Sekarang', callback_data: 'jadwalsekarang'}
+              { text: 'Jadwal Sekarang', callback_data: 'jadwalsekarang' }
             ]
           ]
         }
@@ -60,14 +69,69 @@ bot.on('callback_query', (callbackQuery) => {
       );
       break;
 
-case 'roster':
-  bot.sendPhoto(chatId, '../image.png', {caption: '📋 Berikut roster anda',  parse_mode: 'Markdown' });
-  break;
+    case 'roster':
+      const imagePath = path.join(__dirname, 'image.png');
+      bot.sendPhoto(chatId, fs.createReadStream(imagePath), {
+        caption: '📋 Berikut roster anda',
+        parse_mode: 'Markdown'
+      });
+      break;
 
     case 'livemapel':
-      bot.sendMessage(chatId, 
-        'Keranjang belanja Anda masih kosong');
+      const now = new Date();
+      const hariList = ['MINGGU', 'SENIN', 'SELASA', 'RABU', 'KAMIS', 'JUMAT', 'SABTU'];
+      const hari = hariList[now.getDay()];
+
+      const jamSekarang = now.getHours() * 60 + now.getMinutes();
+      const jadwalHariIni = jadwal[hari];
+
+      if (!jadwalHariIni) {
+        bot.sendMessage(chatId, 'Hari ini tidak ada jadwal pelajaran.');
+        break;
+      }
+
+      let currentLesson = null;
+
+      for (const pelajaran of jadwalHariIni) {
+        const [mulai, selesai] = pelajaran.waktu.split(' - ').map(s => s.split(' ')[0]);
+        const start = parseTime(mulai);
+        const end = parseTime(selesai);
+
+        if (jamSekarang >= start && jamSekarang <= end) {
+          currentLesson = pelajaran;
+          break;
+        }
+      }
+
+      if (currentLesson) {
+        const [_, selesai] = currentLesson.waktu.split(' - ').map(s => s.split(' ')[0]);
+        const [jamSelesai, menitSelesai] = selesai.split('.').map(Number);
+        const waktuSelesai = new Date();
+        waktuSelesai.setHours(jamSelesai, menitSelesai, 0, 0);
+
+        const sisaMs = waktuSelesai - now;
+        const sisaMenit = Math.floor(sisaMs / 60000);
+        const sisaDetik = Math.floor((sisaMs % 60000) / 1000);
+
+        bot.sendMessage(chatId, 
+          `📘 Pelajaran yang sedang berlangsung:\n` +
+          `Mapel: *${currentLesson.mapel}*\n` +
+          `Guru: ${currentLesson.guru}\n` +
+          `Selesai pada: ${selesai}\n\n` +
+          `⏳ Waktu tersisa: ${sisaMenit} menit ${sisaDetik} detik.`,
+          { parse_mode: 'Markdown' }
+        );
+      } else {
+        bot.sendMessage(chatId, 'Sekarang tidak ada pelajaran berlangsung.');
+      }
       break;
+
+    case 'jadwalsekarang':
+      bot.sendMessage(chatId, 'Jadwal pelajaran anda saat ini adalah ...');
+      break;
+  } // ← ini penutup switch
+); // ← ini penutup event
+
 
       case 'jadwalsekarang':
       bot.sendMessage(chatId, 'Jadwal pelajaran anda saat ini adalah ...');
